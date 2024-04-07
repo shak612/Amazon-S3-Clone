@@ -21,9 +21,9 @@ exports.loginService = async (userData) => {
         return response;
       }
 
-      const findUserData = await Users.findOne({username: userData.username})
+      const findUserData = await Users.findOne({ username: userData.username })
 
-      if(Object.keys(findUserData).length > 0){
+      if(findUserData && Object.keys(findUserData).length > 0){
         const result = bcrypt.compareSync(userData.password, findUserData.password)
         if(result){
          const token = jwt.sign(
@@ -37,6 +37,8 @@ exports.loginService = async (userData) => {
         }else{
           response["message"] = "Invalid Password!!"
         }
+      }else{
+        response.message = "Username is not existed!!"
       }
       
      return response;

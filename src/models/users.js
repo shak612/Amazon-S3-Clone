@@ -38,12 +38,10 @@ const usersSchema = new mongoose.Schema({
 
 // Define the plugin function
 function autoIncrementPlugin(schema) {
-  console.log("schemaaaaaaaaaaaaaaaaa", schema)
     schema.add({
       id: {
         type: Number,
-        unique: true,
-        required: true
+        unique: true
       }
     });
   

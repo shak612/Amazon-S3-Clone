@@ -31,7 +31,7 @@ exports.registerService = async (userData) => {
       response.status = true;
       response.message = "Successfully registered!!"
 
-     return result;
+     return response;
     } catch (error) {
       console.log(error)
         const response = {
