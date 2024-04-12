@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+
 const userRoutes = require('./routes/userRoutes');
 const fileRoutes = require('./routes/fileRoutes');
 const { verifyToken } = require('./middlewares/verifyToken');
 const app = express();
-const dotenv = require('dotenv');
 dotenv.config();
 
 //************************Morgan************************//
@@ -11,7 +13,7 @@ require('./utils/logReports/logger')(app);
 
 //************************Database-Connection************************//
 require('../configs/dbConnection')();
-
+app.use(cors())
 app.use(express.json());
 
 app.use('/api/user', userRoutes);

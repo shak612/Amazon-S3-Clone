@@ -1,7 +1,7 @@
 const { uploadService } = require("../services/fileServices/uploadService");
 
 exports.uploadController = (req, res) => {
-    uploadService(req.body).then((response) => {
+    uploadService(req).then((response) => {
         if (!response.status) {
             throw new Error(response.message);
         }
