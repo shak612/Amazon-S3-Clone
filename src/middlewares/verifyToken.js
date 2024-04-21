@@ -9,7 +9,7 @@ exports.verifyToken = (req, res, next) => {
                 req.message = "Header verification failed, some issue with the token!!"
                 next();
             }else{
-                req.user = decoded.userName;
+                req.userId = decoded.userId;
                 req.message = "User found succefully!!"
                 next();
             }

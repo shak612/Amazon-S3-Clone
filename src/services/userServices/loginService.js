@@ -27,7 +27,7 @@ exports.loginService = async (userData) => {
         const result = bcrypt.compareSync(userData.password, findUserData.password)
         if(result){
          const token = jwt.sign(
-            {userName: findUserData.username}, 
+            {userId: findUserData._id}, 
             process.env.JWT_SECRET_KEY, 
             {expiresIn: 86400}
             )

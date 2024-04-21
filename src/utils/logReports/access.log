@@ -32,3 +32,15 @@
 ::1 - - [12/Apr/2024:08:55:45 +0000] "POST /api/file/upload HTTP/1.1" 401 70
 ::1 - - [12/Apr/2024:09:51:08 +0000] "POST /api/file/upload HTTP/1.1" 500 1471
 ::1 - - [12/Apr/2024:09:54:55 +0000] "POST /api/file/upload HTTP/1.1" 401 70
+::1 - - [21/Apr/2024:18:53:53 +0000] "GET /api/user/login HTTP/1.1" 200 247
+::1 - - [21/Apr/2024:18:57:58 +0000] "POST /api/file/upload HTTP/1.1" 401 70
+::1 - - [21/Apr/2024:18:59:59 +0000] "POST /api/file/upload HTTP/1.1" 401 70
+::1 - - [21/Apr/2024:19:00:32 +0000] "POST /api/file/upload HTTP/1.1" 401 70
+::1 - - [21/Apr/2024:19:19:30 +0000] "POST /api/file/upload HTTP/1.1" 401 66
+::1 - - [21/Apr/2024:19:19:54 +0000] "POST /api/file/upload HTTP/1.1" 401 66
+::1 - - [21/Apr/2024:19:20:09 +0000] "POST /api/file/upload HTTP/1.1" 401 66
+::1 - - [21/Apr/2024:19:21:45 +0000] "POST /api/file/upload HTTP/1.1" 401 64
+::1 - - [21/Apr/2024:19:24:38 +0000] "POST /api/file/upload HTTP/1.1" 401 154
+::1 - - [21/Apr/2024:19:30:06 +0000] "GET /api/user/login HTTP/1.1" 200 268
+::1 - - [21/Apr/2024:19:30:30 +0000] "POST /api/file/upload HTTP/1.1" 200 61
+::1 - - [21/Apr/2024:19:33:35 +0000] "POST /api/file/upload HTTP/1.1" 200 61
