@@ -6,5 +6,6 @@ const { verifyToken } = require('../middlewares/verifyToken');
 const router = express.Router();
 
 router.post('/upload', verifyToken, fileHandler, fileController.uploadController)
+router.get('/read', verifyToken, fileController.readController)
 
 module.exports = router;
