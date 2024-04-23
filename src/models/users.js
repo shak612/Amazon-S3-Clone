@@ -33,7 +33,10 @@ const usersSchema = new mongoose.Schema({
         type: String, 
         require: true 
     },
-})
+},
+{
+  timestamps: true // Add timestamps option
+});
 
 
 // Define the plugin function

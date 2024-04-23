@@ -28,10 +28,14 @@ exports.readService = async (data) => {
             return response;
         }
 
-        filesData.forEach(({ directory, filename }) => {
+        filesData.forEach(({ directory, versions }) => {
             response.data.push({
                 directory,
-                filename
+                filename: (() => {
+                    let tempFileName = "";
+                    tempFileName = versions.details.sort((a, b) => b.version - a.version)[0].filename;
+                    return tempFileName;
+                })()
             })
         })
 
