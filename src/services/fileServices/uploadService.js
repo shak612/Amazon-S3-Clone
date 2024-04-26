@@ -8,11 +8,13 @@ exports.uploadService = async (data) => {
     }
 
     try {
-    if(data.userId === null)
-       return response.message = data.message;
+    
+    if(!data.userId){
+      response.message = data.message;
+      return response;
+    }
 
     const userId = data.userId;
-
     const existingFile = await File.findOne({owner: new mongoose.Types.ObjectId(userId), originalName: data.file.originalname });
 
     if(existingFile != undefined){  
